@@ -5,8 +5,11 @@
       <td>votes: <%= question.votes %></td>
       <td>answers: <%= question.answers.count %></td>
       <td><%=question.title%></td>
-      <td>posted: <%= question.created_at %></td>
-      <td><%= link_to 'Show', question %></td>
-    </tr><br>
+      <td>posted: <%= question.created_at.strftime("%B %d, %Y") %></td>
+      <td>  <%= link_to 'Show', question %></td><br>
+      <td>author: <%= link_to question.author.username, question.author %></td> 
+    </tr><br><br>
   <% end %>
 </div>
+
+      
