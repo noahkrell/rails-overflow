@@ -1,4 +1,4 @@
 class AnswerComment < ApplicationRecord
-  belongs_to :answer
-  belongs_to :commentor, class_name: "User", ptional: true
+  belongs_to :answer, optional: true
+  belongs_to :commentor, class_name: "User", optional: true
 end

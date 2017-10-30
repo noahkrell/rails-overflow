@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  validates :username, uniqueness: true
   has_many :questions, class_name: "Question", foreign_key: :author_id
   has_many :answers, class_name: "Answer", foreign_key: :solver_id
   has_many :answer_comments, class_name: "AnswerComment", foreign_key: :commentor_id
