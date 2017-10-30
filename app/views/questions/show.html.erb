@@ -1,0 +1,14 @@
+<div>
+  <p>
+    <strong>Title:</strong>
+    <%= @question.title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= @question.body %>
+  </p>
+</div>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', question_path %>
